@@ -115,18 +115,25 @@ const Header: React.FC = () => {
     setDropdown(true);
   };
 
-  const handleToggleCollapseMenu = (index: number, isCollapse: boolean) => {
+  const handleToggleCollapseMenu = (index: number, isCollapsed: boolean) => {
     const headermenu = searchMenu[index];
-    if (isCollapse) {
+    if (isCollapsed && headermenu.childLinks) {
       setIsDropdownCollapsed((prev) => !prev);
       setSearchMenu([headermenu]);
-      setChildMenu(headermenu.childLinks ?? []);
+      
+      // Map headermenu.childLinks to the ProfileItem interface
+      const mappedChildLinks: ProfileItem[] = headermenu.childLinks.map((item) => ({
+        name: item.name,
+        logo: "/path/to/defaultLogo.png", // Add a default logo or customize this based on the child link
+      }));
+      
+      setChildMenu(mappedChildLinks);
       setIsChildVisible(!isChildVisible);
       if (isChildVisible) {
         setSearchMenu(searchMenuData);
       }
     }
-    if(headermenu.name === searchMenuData[0].name){
+    if (headermenu.name === searchMenuData[0].name) {
       console.log('true')
       setIsFocused(true);
       setDropdown(false);
@@ -299,7 +306,7 @@ const Header: React.FC = () => {
                       <div
                         key={index}
                         onClick={() =>
-                          handleToggleCollapseMenu(index, item.isCollapsed)
+                          handleToggleCollapseMenu(index, item.isCollapsed  || false)
                         }
                         className="flex cursor-pointer items-center  px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
