@@ -20,18 +20,18 @@ const CopilotChat = ({ handleFocusTrue }: SidebarProps) => {
 
   // Function to scroll to the bottom of conversation
   const scrollToBottom = () => {
-    if (scrollRef && scrollRef.current) {
-      const scrollbars = scrollRef.current;
-      scrollbars.scrollToBottom();
-    }
+    // if (scrollRef && scrollRef.current) {
+    //   const scrollbars = scrollRef.current;
+    //   scrollbars.scrollToBottom();
+    // }
   };
 
   const [tooltip , setTooltip] = useState("Copy");
 
   // Effect to scroll to bottom on conversation change
-  useEffect(() => {
-    scrollToBottom();
-  }, [conversation]);
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, [conversation]);
 
   // Handles user input change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

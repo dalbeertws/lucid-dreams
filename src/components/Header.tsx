@@ -13,6 +13,7 @@ interface MenuItem {
 interface ProfileItem {
   name: string;
   logo: string;
+  isCollapsed?: boolean;
 }
 
 const Header: React.FC = () => {
