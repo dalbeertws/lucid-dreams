@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isChildVisible, setIsChildVisible] = useState(false);
-  const [childMenu, setChildMenu] = useState([]);
+  const [childMenu, setChildMenu] = useState<ProfileItem[]>([]);
   const [search , setSearch] = useState('')
 
   const searchMenuData: MenuItem[] = [

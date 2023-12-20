@@ -16,7 +16,7 @@ const CopilotChat = ({ handleFocusTrue }: SidebarProps) => {
 
   // State to manage conversation
   const [conversation, setConversation] = React.useState<ChatMessage[]>([]);
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<Scrollbars | null>(null); 
 
   // Function to scroll to the bottom of conversation
   const scrollToBottom = () => {
