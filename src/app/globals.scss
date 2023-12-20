@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+.chat-height {
+  height: calc(100vh - 90px);
+  }
+.scroll-height {
+  height: calc(100vh - 250px)!important;
+  width: 100%;
+}
+@layer utilities {
+  .box-shadow {
+    box-shadow: -14px 8px 20px 0px rgba(19, 25, 35, 0.1);
+  }
+
+  .backdrop-filter {
+    backdrop-filter: blur(25px);
+  }
+}
