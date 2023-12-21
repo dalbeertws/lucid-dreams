@@ -148,7 +148,7 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <div className="max-w-[144px] max-h-[30px] w-full">
               <Image
-                src="/images/lucidlogo.png    "
+                src="../images/logo.svg    "
                 alt="logo"
                 width={145}
                 height={35}
