@@ -148,7 +148,7 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <div className="max-w-[144px] max-h-[30px] w-full">
               <Image
-                src="../images/logo.svg    "
+                src="/images/logodreamlucid.png"
                 alt="logo"
                 width={145}
                 height={35}
@@ -248,7 +248,7 @@ const Header: React.FC = () => {
                 />
               </span>
               <p className="text-[14px] font-normal text-black cursor-pointer ">
-                {" "}
+                
                 Main Scenario
               </p>
               <span>
